@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import classNames from 'classNames';
 import { Container, Grid } from '@material-ui/core';
-import MenuItem from './MenuItem';
 
 import useStyles from './styles';
 import { MenuItem as MenuItemData, IProps } from './data.d';
@@ -51,6 +50,7 @@ const Navbar: React.FC<IProps> = ({ menuData }) => {
               <a key={item.id} className={classNames(`${classes['dropdown-item']}`)} href="#basic">
                 <i className="fas fa-box-open mr-5"></i>
                 <span>{item.to}</span>
+                {/* {item.children ? renderMenuItemNode(item.children, level + 1) : null} */}
               </a>
             )
           })
