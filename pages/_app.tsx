@@ -6,6 +6,8 @@ import { CacheProvider } from '@emotion/react';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import createCache from '@emotion/cache';
 import theme from '../src/theme';
+import '../src/global.css';
+import 'animate.css';
 
 export const cache = createCache({ key: 'css' });
 

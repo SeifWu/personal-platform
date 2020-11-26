@@ -1,24 +1,73 @@
 import React from 'react';
-import Container from '@material-ui/core/Container';
-import Typography from '@material-ui/core/Typography';
-import Box from '@material-ui/core/Box';
-import ProTip from '../src/ProTip';
-import Link from '../src/Link';
-import Copyright from '../src/Copyright';
+import { GetServerSideProps } from 'next';
+import Navbar from '../src/components/Navbar';
+import { MenuItem } from '../src/components/Navbar/data';
 
-export default function Index() {
+const navbar: Array<MenuItem> = [
+  {
+    id: 1,
+    pid: 0,
+    title: '一级',
+    to: '/#1',
+  },
+  {
+    id: 2,
+    pid: 1,
+    title: '二级1',
+    to: '/#1-1',
+  },
+  {
+    id: 3,
+    pid: 1,
+    title: '二级2',
+    to: '/#1-2',
+  },
+  {
+    id: 4,
+    pid: 1,
+    title: '二级3',
+    to: '/#1-3',
+  },
+  {
+    id: 5,
+    pid: 0,
+    title: '一级2',
+    to: '/#2',
+  },
+  {
+    id: 6,
+    pid: 5,
+    title: '二级2',
+    to: '/#2-1',
+  },
+  {
+    id: 8,
+    pid: 5,
+    title: '二级3',
+    to: '/#2-2',
+  },
+  {
+    id: 7,
+    pid: 6,
+    title: '三级1',
+    to: '/#3-1',
+  },
+]
+
+export const getServerSideProps: GetServerSideProps = async (_context) => {
+  return {
+    props: {
+      navbar,
+    },
+  }
+}
+
+export default function Index(props: any) {
+  console.log(props)
   return (
-    <Container maxWidth="sm">
-      <Box my={4}>
-        <Typography variant="h4" component="h1" gutterBottom>
-          Next.js v5-alpha with TypeScript example
-        </Typography>
-        <Link href="/about" color="secondary">
-          Go to the about page
-        </Link>
-        <ProTip />
-        <Copyright />
-      </Box>
-    </Container>
+    <>
+      <Navbar menuData={navbar} />
+      <div style={{ height: 1000, background: "#dfdfdf" }}></div>
+    </>
   );
 }
