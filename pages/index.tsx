@@ -2,6 +2,7 @@ import React from 'react';
 import { GetServerSideProps } from 'next';
 import Navbar from '../src/components/Navbar';
 import { MenuItem } from '../src/components/Navbar/data';
+import TopMenu from '../src/components/TopMenu';
 
 const navbar: Array<MenuItem> = [
   {
@@ -66,8 +67,9 @@ export default function Index(props: any) {
   console.log(props)
   return (
     <>
-      <Navbar menuData={navbar} />
-      <div style={{ height: 1000, background: "#dfdfdf" }}></div>
+      {/* <Navbar menuData={navbar} /> */}
+      <TopMenu menuData={navbar} title="Annie" />
+      <div style={{ height: 1000 }}></div>
     </>
   );
 }
