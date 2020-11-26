@@ -1,3 +1,4 @@
 export interface TitleProps {
-  title: String;
+  title: string;
+  logoUrl: string;
 }

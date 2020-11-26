@@ -5,7 +5,7 @@ import { TopMenuProps } from './data';
 import Title from './components/Title';
 import styles from './styles';
 
-const TopMenu: React.FC<TopMenuProps> = ({ title }) => {
+const TopMenu: React.FC<TopMenuProps> = ({ title, logoUrl }) => {
   const cls = styles();
 
   return (
@@ -16,7 +16,7 @@ const TopMenu: React.FC<TopMenuProps> = ({ title }) => {
           root: cls.container,
         }}
       >
-        <Title title={title} />
+        <Title title={title} logoUrl={logoUrl} />
       </Container>
     </React.Fragment>
   )

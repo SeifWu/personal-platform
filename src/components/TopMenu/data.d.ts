@@ -7,6 +7,7 @@ export interface MenuItem {
 }
 
 export interface TopMenuProps {
-  title: String;
+  title: string;
+  logoUrl: string;
   menuData: Array<MenuItem>
 }

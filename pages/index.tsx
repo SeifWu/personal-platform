@@ -68,7 +68,7 @@ export default function Index(props: any) {
   return (
     <>
       {/* <Navbar menuData={navbar} /> */}
-      <TopMenu menuData={navbar} title="Annie" />
+      <TopMenu menuData={navbar} title="Annie" logoUrl="/logo.png" />
       <div style={{ height: 1000 }}></div>
     </>
   );
