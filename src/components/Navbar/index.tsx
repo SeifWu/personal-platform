@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
+import React from 'react';
 import classNames from 'classNames';
-import { Container, Grid } from '@material-ui/core';
+import { Container } from '@material-ui/core';
 
 import useStyles from './styles';
 import { MenuItem as MenuItemData, IProps } from './data.d';
