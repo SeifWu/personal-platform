@@ -50,7 +50,7 @@ const Navbar: React.FC<IProps> = ({ menuData }) => {
               <a key={item.id} className={classNames(`${classes['dropdown-item']}`)} href="#basic">
                 <i className="fas fa-box-open mr-5"></i>
                 <span>{item.to}</span>
-                {/* {item.children ? renderMenuItemNode(item.children, level + 1) : null} */}
+                {item.children ? renderMenuItemNode(item.children, level + 1) : null}
               </a>
             )
           })
