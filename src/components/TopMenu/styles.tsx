@@ -5,6 +5,10 @@ export default makeStyles({
     display: 'flex',
     flexWrap: 'nowrap',
     alignItems: 'center',
+    position: 'absolute',
+    top: 0,
+    left: 0,
+    right: 0,
   }
 })
 

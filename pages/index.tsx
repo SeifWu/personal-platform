@@ -1,6 +1,5 @@
 import React from 'react';
 import { GetServerSideProps } from 'next';
-import Navbar from '../src/components/Navbar';
 import { MenuItem } from '../src/components/Navbar/data';
 import TopMenu from '../src/components/TopMenu';
 
@@ -12,10 +11,28 @@ const navbar: Array<MenuItem> = [
     to: '/#1',
   },
   {
+    id: 1121,
+    pid: 1,
+    title: '一级子级1',
+    to: '/#2',
+  },
+  {
+    id: 11211,
+    pid: 1121,
+    title: '一级孙级1',
+    to: '/#2',
+  },
+  {
     id: 2,
     pid: 1,
     title: '二级1',
     to: '/#1-1',
+  },
+  {
+    id: 2221,
+    pid: 2,
+    title: '2级孙级1',
+    to: '/#2',
   },
   {
     id: 3,
@@ -67,9 +84,7 @@ export default function Index(props: any) {
   console.log(props)
   return (
     <>
-      {/* <Navbar menuData={navbar} /> */}
       <TopMenu menuData={navbar} title="Annie" logoUrl="/logo.png" />
-      <div style={{ height: 1000 }}></div>
     </>
   );
 }
