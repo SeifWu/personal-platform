@@ -18,8 +18,6 @@ interface SubMenuItemProps {
 
 const SubMenuItem: React.FC<SubMenuItemProps> = ({ menuData, level = 0 }) => {
   const classes = useStyles({});
-
-  console.log(level)
   const [open, setOpen] = React.useState(false);
 
   const handleClick = () => {
