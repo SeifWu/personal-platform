@@ -1,6 +1,7 @@
 import React from 'react';
 // import { getStaticProps } from 'next';
 
+import FirstScreen from '../src/components/FirstScreen';
 // import { MenuItem } from '../src/components/Navbar/data';
 // import TopMenu from '../src/components/TopMenu';
 
@@ -21,11 +22,12 @@ export async function getStaticProps() {
 }
 
 
-export default function Index({ title = '' }) {
+export default function Index({ title = '', background = '' }) {
 
   return (
     <>
       {/* <TopMenu menuData={menuData} title="Annie" logoUrl="/logo.png" /> */}
+      <FirstScreen source={background} />
       <div>
         {title}
       </div>
