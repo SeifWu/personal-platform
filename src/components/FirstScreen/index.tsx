@@ -4,7 +4,7 @@ import VideoBackground from '../VideoBackground';
 const FirstScreen: React.FC<any> = ({ source }) => {
   return (
     <React.Fragment>
-      <VideoBackground source={source} />
+      <VideoBackground source={source} cover="" />
     </React.Fragment>
   )
 }
