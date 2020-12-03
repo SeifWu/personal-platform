@@ -1,15 +1,21 @@
 import React from 'react';
 import Head from 'next/head';
+import Router from 'next/router';
 import { AppProps } from 'next/app';
 import { ThemeProvider } from '@material-ui/core/styles';
 import { CacheProvider } from '@emotion/react';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import createCache from '@emotion/cache';
-import theme from '../src/theme';
-import '../src/global.css';
-import 'animate.css';
+import NProgress from 'nprogress'; //nprogress module
+import 'nprogress/nprogress.css'; //styles of nprogress
 
+import theme from '../src/theme';
 export const cache = createCache({ key: 'css' });
+
+//Binding events.
+Router.events.on('routeChangeStart', () => { NProgress.start() });
+Router.events.on('routeChangeComplete', () => NProgress.done());
+Router.events.on('routeChangeError', () => NProgress.done());
 
 export default function MyApp(props: AppProps) {
   const { Component, pageProps } = props;

@@ -13,10 +13,12 @@
     "@material-ui/core": "latest",
     "@material-ui/icons": "^4.9.1",
     "@material-ui/styles": "^4.10.0",
+    "@types/nprogress": "^0.2.0",
     "animate.css": "^4.1.1",
     "classnames": "^2.2.6",
     "clsx": "latest",
     "next": "latest",
+    "nprogress": "^0.2.0",
     "react": "latest",
     "react-dom": "latest",
     "swr": "^0.3.9"
