@@ -1,8 +1,8 @@
 import React from 'react';
 import useSWR from 'swr'
-import { GetServerSideProps } from 'next';
+// import { GetServerSideProps } from 'next';
 
-import { MenuItem } from '../src/components/Navbar/data';
+// import { MenuItem } from '../src/components/Navbar/data';
 import TopMenu from '../src/components/TopMenu';
 
 // const navbar: Array<MenuItem> =
