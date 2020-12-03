@@ -1,27 +1,34 @@
 import React from 'react';
-import useSWR from 'swr'
-// import { GetServerSideProps } from 'next';
+// import { getStaticProps } from 'next';
 
 // import { MenuItem } from '../src/components/Navbar/data';
-import TopMenu from '../src/components/TopMenu';
+// import TopMenu from '../src/components/TopMenu';
 
-// const navbar: Array<MenuItem> =
+export async function getStaticProps() {
+  const res = await fetch('https://seifwu.github.io/mock/api/v1/home.json')
+  const ResponseJson = await res.json()
+  console.log(ResponseJson)
 
-const fetcher = (url: string) => fetch(url).then((res) => res.json());
-
-
-export default function Index() {
-  const { data, error } = useSWR('/api/menus', fetcher);
-  let menuData = []
-  if (data) {
-    menuData = data.data;
+  return {
+    props: {
+      ...ResponseJson,
+    },
+    // Next.js will attempt to re-generate the page:
+    // - When a request comes in
+    // - At most once every second
+    revalidate: 1, // In seconds
   }
-  if (error) {
-    console.log("error")
-  }
+}
+
+
+export default function Index({ title = '' }) {
+
   return (
     <>
-      <TopMenu menuData={menuData} title="Annie" logoUrl="/logo.png" />
+      {/* <TopMenu menuData={menuData} title="Annie" logoUrl="/logo.png" /> */}
+      <div>
+        {title}
+      </div>
     </>
   );
 }
