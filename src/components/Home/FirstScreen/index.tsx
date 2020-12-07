@@ -6,7 +6,7 @@ const FirstScreen: React.FC<any> = ({ source, backgroundCover }) => {
     <React.Fragment>
       <div style={{ position: 'relative', minHeight: '100vh', width: '100%', }}>
         <VideoBackground source={source} backgroundCover={backgroundCover} />
-        <img src='/waves2.svg'
+        <img src='/waves.svg'
           style={{
             position: "absolute",
             left: 0,
