@@ -3,12 +3,14 @@ import { CubeGridScaleDelayProps } from './data';
 
 export default makeStyles({
   cubeGrid: {
+    position: 'absolute',
     width: 40,
     height: 40,
-    margin: '100px auto',
-    '& $cube1': {
-
-    }
+    top: 0,
+    left: 0,
+    right: 0,
+    bottom: 0,
+    margin: 'auto',
   },
   cube: {
     width: '33%',

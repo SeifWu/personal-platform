@@ -1,29 +1,25 @@
-import React, { useState, useEffect, useRef } from 'react';
-import { VideoBackgroundProps } from './data';
+import React, { useState } from 'react';
 
+// import ProgressiveImg from '../ProgressiveImg';
+import { VideoBackgroundProps } from './data';
 import useStyles from './styles';
 
-const VideoBackground: React.FC<VideoBackgroundProps> = ({ source, cover }) => {
+const VideoBackground: React.FC<VideoBackgroundProps> = (props) => {
+  const { source, backgroundCover } = props;
   const cls = useStyles();
   const [canPlay, setPlayStats] = useState(false);
-  const videoEl = useRef(null)
   const onCanPlay = () => {
     setPlayStats(true);
   }
-  useEffect(() => {
-    console.log(videoEl)
-  })
-  console.log(canPlay)
-  // if (!canPlay) {
-  //   return <img src={cover} />
-  // }
-
+  console.log(canPlay);
   return (
     <React.Fragment>
-      <img src={cover} alt="hhhhh" />
+      {/* {
+        canPlay ? null : <ProgressiveImg src={backgroundCover} fallbackSrc='' style={{ position: 'fixed', width: '100%', height: '100%', objectFit: 'cover' }} />
+      } */}
       <video
-        ref={videoEl}
         className={cls.container}
+        poster={backgroundCover}
         playsInline
         autoPlay
         muted

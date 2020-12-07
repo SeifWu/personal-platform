@@ -22,12 +22,12 @@ export async function getStaticProps() {
 }
 
 
-export default function Index({ title = '', background = '' }) {
+export default function Index({ title = '', background = '', background_cover = '' }) {
 
   return (
     <>
       {/* <TopMenu menuData={menuData} title="Annie" logoUrl="/logo.png" /> */}
-      <FirstScreen source={background} />
+      <FirstScreen source={background} backgroundCover={background_cover} />
       <div>
         {title}
       </div>
