@@ -24,7 +24,11 @@ const FirstScreen: React.FC<any> = ({ source, backgroundCover }) => {
       <div style={{ position: 'relative', minHeight: '100vh', width: '100%', userSelect: 'none', }}>
         <VideoBackground source={source} backgroundCover={backgroundCover} />
         <Mask />
-        <img src='/waves.svg' className={cls.headerImageBottom} />
+        <img
+          src='/waves.svg'
+          className={cls.headerImageBottom}
+          onDragStart={e => e.preventDefault()}
+        />
       </div>
 
       <div style={{ minHeight: '100vh', width: '100%' }}></div>
