@@ -18,7 +18,7 @@ const FirstScreen: React.FC<any> = ({ source, backgroundCover }) => {
         />
       </div>
 
-      <div style={{ minHeight: '100vh', width: '100%', background: '#333' }}></div>
+      <div style={{ minHeight: '100vh', width: '100%' }}></div>
     </React.Fragment>
   )
 }
