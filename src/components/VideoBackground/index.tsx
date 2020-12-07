@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 
-// import ProgressiveImg from '../ProgressiveImg';
 import { VideoBackgroundProps } from './data';
 import useStyles from './styles';
 
@@ -14,9 +13,6 @@ const VideoBackground: React.FC<VideoBackgroundProps> = (props) => {
   console.log(canPlay);
   return (
     <React.Fragment>
-      {/* {
-        canPlay ? null : <ProgressiveImg src={backgroundCover} fallbackSrc='' style={{ position: 'fixed', width: '100%', height: '100%', objectFit: 'cover' }} />
-      } */}
       <video
         className={cls.container}
         poster={backgroundCover}
