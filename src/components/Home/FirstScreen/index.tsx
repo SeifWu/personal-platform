@@ -11,7 +11,7 @@ const FirstScreen: React.FC<any> = ({ source, backgroundCover }) => {
             position: "absolute",
             left: 0,
             right: 0,
-            bottom: 0,
+            bottom: -2,
             width: '100%',
             height: 'auto',
           }}
