@@ -1,7 +1,7 @@
 import React from 'react';
 // import { getStaticProps } from 'next';
 
-import FirstScreen from '../src/components/FirstScreen';
+import FirstScreen from '../src/components/Home/FirstScreen';
 // import { MenuItem } from '../src/components/Navbar/data';
 // import TopMenu from '../src/components/TopMenu';
 
@@ -23,14 +23,11 @@ export async function getStaticProps() {
 
 
 export default function Index({ title = '', background = '', background_cover = '' }) {
-
+  console.log(title)
   return (
     <>
       {/* <TopMenu menuData={menuData} title="Annie" logoUrl="/logo.png" /> */}
       <FirstScreen source={background} backgroundCover={background_cover} />
-      <div>
-        {title}
-      </div>
     </>
   );
 }
