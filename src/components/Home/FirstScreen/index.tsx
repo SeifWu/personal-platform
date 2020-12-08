@@ -23,6 +23,11 @@ const FirstScreen: React.FC<any> = ({ source, backgroundCover }) => {
     <React.Fragment>
       <div style={{ position: 'relative', minHeight: '100vh', width: '100%', userSelect: 'none', }}>
         <VideoBackground source={source} backgroundCover={backgroundCover} />
+        <p style={{ color: '#fff', margin: 0, paddingTop: '40vh', fontSize: '2rem', lineHeight: '3rem', textAlign: 'center', textShadow: '1px 1px 1px #3c5c5e' }}>
+          Welcome
+          <br />
+          Seif's Website
+        </p>
         <Mask />
         <img
           src='/waves.svg'
@@ -30,8 +35,6 @@ const FirstScreen: React.FC<any> = ({ source, backgroundCover }) => {
           onDragStart={e => e.preventDefault()}
         />
       </div>
-
-      <div style={{ minHeight: '100vh', width: '100%' }}></div>
     </React.Fragment>
   )
 }
