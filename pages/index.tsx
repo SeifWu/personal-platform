@@ -11,7 +11,6 @@ import { Grid, Container } from '@material-ui/core';
 export async function getStaticProps() {
   const res = await fetch('https://seifwu.github.io/mock/api/v1/home.json');
   const ResponseJson = await res.json();
-  console.log(ResponseJson);
 
   return {
     props: {
@@ -31,7 +30,7 @@ export default function Index({ background = '', background_cover = '' }) {
       <FirstScreen source={background} backgroundCover={background_cover} />
       <SectionTitle title="Project" subTitle="个人实践" />
       <Container>
-        <Grid spacing={3}>
+        <Grid container spacing={3}>
           <Grid item xs={12} md={4}>
             <MediaCard
               coverImg="https://seifwu.github.io/static/img/video-background-1.png"
