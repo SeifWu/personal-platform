@@ -10,6 +10,8 @@ import NProgress from 'nprogress'; //nprogress module
 import 'nprogress/nprogress.css'; //styles of nprogress
 
 import theme from '../src/theme';
+import '../styles.css'
+
 export const cache = createCache({ key: 'css' });
 
 //Binding events.
