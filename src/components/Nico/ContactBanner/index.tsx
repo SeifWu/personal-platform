@@ -1,6 +1,6 @@
 import React from 'react';
-import { makeStyles } from '@material-ui/core/styles';
-import { Grid, Button, Container } from '@material-ui/core';
+import { makeStyles, useTheme } from '@material-ui/core/styles';
+import { Grid, Button, Container,useMediaQuery } from '@material-ui/core';
 
 const useStyles = makeStyles({
   container: {
@@ -17,7 +17,7 @@ const useStyles = makeStyles({
   contactButton: {
     color: '#fff',
     fontWeight: 700,
-    padding: '16px 40px',
+    padding: '12px 40px',
     background: 'linear-gradient(45deg, #5365d4 30%, #336699 90%)',
     borderRadius: 50,
     boxShadow: '0 1px 5px rgba(33,57,151,0.3),0 1px 5px rgba(33,57,151,0.5)',
@@ -33,6 +33,8 @@ export interface ContactBannerProps {}
 const ContactBanner: React.FC<ContactBannerProps> = (props) => {
   const {} = props;
   const cls = useStyles(props);
+  const theme = useTheme();
+  const matches = useMediaQuery(theme.breakpoints.up('md'));
 
   return (
     <section className={cls.container}>
@@ -46,7 +48,7 @@ const ContactBanner: React.FC<ContactBannerProps> = (props) => {
           <Grid item xs={12} md={6}>
             <h4 className={cls.title}>Need to contact me ?</h4>
           </Grid>
-          <Grid item xs={12} md={6}>
+          <Grid item xs={12} md={6} style={{textAlign: matches ? 'right' : 'left'}}>
             <Button
               variant="contained"
               startIcon=""
