@@ -2,7 +2,7 @@ import React from 'react';
 
 // import { getStaticProps } from 'next';
 
-import { MediaCard, SectionTitle } from '@/components/Nico';
+import { MediaCard, SectionTitle, ContactBanner } from '@/components/Nico';
 import FirstScreen from '../src/components/Home/FirstScreen';
 import { Grid, Container } from '@material-ui/core';
 // import { MenuItem } from '../src/components/Navbar/data';
@@ -41,6 +41,7 @@ export default function Index({ background = '', background_cover = '' }) {
           </Grid>
         </Grid>
       </Container>
+      <ContactBanner />
     </>
   );
 }
