@@ -7,6 +7,7 @@ const useStyles = makeStyles({
     position: 'relative',
     padding: '50px 0',
     background: '#31313a',
+    margin: "24px 0",
   },
   title: {
     color: '#fff',
