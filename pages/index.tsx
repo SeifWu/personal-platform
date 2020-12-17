@@ -7,9 +7,11 @@ import {
   SectionTitle,
   ContactBanner,
   PostCard,
+  Footer,
 } from '@/components/Nico';
 import FirstScreen from '../src/components/Home/FirstScreen';
 import { Grid, Container } from '@material-ui/core';
+
 // import { MenuItem } from '../src/components/Navbar/data';
 // import TopMenu from '../src/components/TopMenu';
 
@@ -47,11 +49,12 @@ export default function Index({ background = '', background_cover = '' }) {
         </Grid>
       </Container>
       <ContactBanner />
-      <div style={{ background: '#fff', marginTop: '-24px', paddingTop: 48}}>
+      <div style={{ background: '#fff', marginTop: '-24px', paddingTop: 96, paddingBottom: 96 }}>
         <Container>
           <PostCard href="/about" />
         </Container>
       </div>
+      <Footer />
     </>
   );
 }

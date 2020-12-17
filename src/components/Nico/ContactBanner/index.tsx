@@ -1,13 +1,13 @@
 import React from 'react';
 import { makeStyles, useTheme } from '@material-ui/core/styles';
-import { Grid, Button, Container,useMediaQuery } from '@material-ui/core';
+import { Grid, Button, Container, useMediaQuery } from '@material-ui/core';
 
 const useStyles = makeStyles({
   container: {
     position: 'relative',
     padding: '50px 0',
     background: '#31313a',
-    margin: "24px 0",
+    margin: '24px 0',
   },
   title: {
     color: '#fff',
@@ -25,7 +25,7 @@ const useStyles = makeStyles({
     transition: '0.2s ease-in-out',
     '&:hover': {
       transform: 'translateY(-2px)',
-    }
+    },
   },
 });
 
@@ -49,7 +49,12 @@ const ContactBanner: React.FC<ContactBannerProps> = (props) => {
           <Grid item xs={12} md={6}>
             <h4 className={cls.title}>Need to contact me ?</h4>
           </Grid>
-          <Grid item xs={12} md={6} style={{textAlign: matches ? 'right' : 'left'}}>
+          <Grid
+            item
+            xs={12}
+            md={6}
+            style={{ textAlign: matches ? 'right' : 'left' }}
+          >
             <Button
               variant="contained"
               startIcon=""
