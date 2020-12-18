@@ -8,6 +8,7 @@ import {
   ContactBanner,
   PostCard,
   Footer,
+  SearchInput,
 } from '@/components/Nico';
 import FirstScreen from '../src/components/Home/FirstScreen';
 import { Grid, Container } from '@material-ui/core';
@@ -49,9 +50,28 @@ export default function Index({ background = '', background_cover = '' }) {
         </Grid>
       </Container>
       <ContactBanner />
-      <div style={{ background: '#fff', marginTop: '-24px', paddingTop: 96, paddingBottom: 96 }}>
+      <div
+        style={{
+          background: '#fff',
+          marginTop: '-24px',
+          paddingTop: 96,
+          paddingBottom: 96,
+        }}
+      >
         <Container>
-          <PostCard href="/about" />
+          <Grid container spacing={6}>
+            <Grid container xs={12} md={8} item spacing={3}>
+              <PostCard href="/about" />
+              <PostCard href="/about" />
+              <PostCard href="/about" />
+              <PostCard href="/about" />
+            </Grid>
+            <Grid container item xs={12} md={4}>
+              <div style={{ width: '100%' }}>
+                <SearchInput />
+              </div>
+            </Grid>
+          </Grid>
         </Container>
       </div>
       <Footer />
