@@ -9,6 +9,7 @@ import {
   PostCard,
   Footer,
   SearchInput,
+  SideCategories,
 } from '@/components/Nico';
 import FirstScreen from '../src/components/Home/FirstScreen';
 import { Grid, Container } from '@material-ui/core';
@@ -54,10 +55,11 @@ export default function Index({ background = '', background_cover = '' }) {
         style={{
           background: '#fff',
           marginTop: '-24px',
-          paddingTop: 96,
+          paddingTop: 8,
           paddingBottom: 96,
         }}
       >
+        <SectionTitle title="Notes" subTitle="笔记" />
         <Container>
           <Grid container spacing={6}>
             <Grid container xs={12} md={8} item spacing={3}>
@@ -69,6 +71,7 @@ export default function Index({ background = '', background_cover = '' }) {
             <Grid container item xs={12} md={4}>
               <div style={{ width: '100%' }}>
                 <SearchInput />
+                <SideCategories />
               </div>
             </Grid>
           </Grid>

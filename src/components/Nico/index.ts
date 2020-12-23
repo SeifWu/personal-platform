@@ -4,5 +4,14 @@ import MediaCard from './MediaCard';
 import PostCard from './PostCard';
 import SearchInput from './SearchInput';
 import SectionTitle from './SectionTitle';
+import SideCategories from './SideCategories';
 
-export { MediaCard, SectionTitle, ContactBanner, PostCard, Footer, SearchInput };
+export {
+  MediaCard,
+  SectionTitle,
+  ContactBanner,
+  PostCard,
+  Footer,
+  SearchInput,
+  SideCategories,
+};
