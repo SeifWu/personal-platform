@@ -5,8 +5,10 @@ import { makeStyles } from '@material-ui/core/styles';
 
 const useStyles = makeStyles({
   customUrl: {
+    display: 'flex',
     color: '#515253',
     fontSize: '1rem',
+    lineHeight: 1.8,
     paddingLeft: 8,
     '&:hover': {
       opacity: 0.6,
