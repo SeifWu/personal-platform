@@ -5,6 +5,7 @@ import PostCard from './PostCard';
 import SearchInput from './SearchInput';
 import SectionTitle from './SectionTitle';
 import SideCategories from './SideCategories';
+import Tags from './Tags';
 
 export {
   MediaCard,
@@ -14,4 +15,5 @@ export {
   Footer,
   SearchInput,
   SideCategories,
+  Tags,
 };

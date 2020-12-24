@@ -10,6 +10,7 @@ import {
   Footer,
   SearchInput,
   SideCategories,
+  Tags,
 } from '@/components/Nico';
 import FirstScreen from '../src/components/Home/FirstScreen';
 import { Grid, Container } from '@material-ui/core';
@@ -72,6 +73,7 @@ export default function Index({ background = '', background_cover = '' }) {
               <div style={{ width: '100%' }}>
                 <SearchInput />
                 <SideCategories />
+                <Tags />
               </div>
             </Grid>
           </Grid>
