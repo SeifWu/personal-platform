@@ -1,6 +1,5 @@
 import React from 'react';
 import { makeStyles, createStyles, Theme } from '@material-ui/core/styles';
-import { Button } from '@material-ui/core';
 import TagButton from './TagButton';
 
 const useStyles = makeStyles((theme: Theme) =>
