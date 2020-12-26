@@ -1,17 +1,32 @@
 import React from 'react';
 import { Container, Grid, useMediaQuery, useTheme } from '@material-ui/core';
+import { makeStyles } from '@material-ui/core/styles';
 import { Copyright, GitHub } from '@material-ui/icons';
 import ActiveLink from '../ActiveLink';
 
 export interface FooterProps {}
 
+const useStyles = makeStyles({
+  container: {
+    background: '#31313a',
+    padding: '24px 0',
+    color: '#fff',
+  },
+  '@media (prefers-color-scheme: dark)': {
+    container: {
+      filter: 'invert(1) hue-rotate(180deg)',
+    },
+  },
+});
+
 const Footer: React.FC<FooterProps> = (props) => {
   const {} = props;
   const theme = useTheme();
+  const cls = useStyles();
   const matchesMd = useMediaQuery(theme.breakpoints.up('md'));
 
   return (
-    <footer style={{ background: '#31313a', padding: '24px 0', color: '#fff' }}>
+    <footer className={cls.container}>
       <Container>
         <Grid container spacing={3}>
           <Grid

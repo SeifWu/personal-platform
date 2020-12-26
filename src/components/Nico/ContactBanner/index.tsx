@@ -27,6 +27,11 @@ const useStyles = makeStyles({
       transform: 'translateY(-2px)',
     },
   },
+  '@media (prefers-color-scheme: dark)': {
+    container: {
+      filter: 'invert(1) hue-rotate(180deg)',
+    },
+  },
 });
 
 export interface ContactBannerProps {}

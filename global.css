@@ -43,8 +43,11 @@ a {
   color: #fff;
 }
 
-/* @media (prefers-color-scheme: dark) {
+@media (prefers-color-scheme: dark) {
   html, img, video {
     filter: invert(1) hue-rotate(180deg);
   }
-} */
+  img, video {
+    opacity: .85;
+  }
+}
